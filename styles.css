@@ -1,0 +1,170 @@
+/* Foundations */
+:root {
+    --background: #e0a40b;
+    --light: #fff;
+    --dark: #000;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--dark);
+    text-align: center;
+}
+
+/* Heading Section */
+.main-heading {
+    font-size: 3em;
+    text-decoration: underline;
+}
+
+/* Task Input Section */
+.task-input {
+    justify-content: center;
+    margin: 0 auto 16px;
+    width: 100%;
+}
+
+.task-input__input-field {
+    margin-bottom: 4px;
+    min-width: 300px;
+}
+
+.task-input__add-button {
+    height: calc(1.5em + .75rem + 2px);
+    vertical-align: middle;
+}
+
+.task-input__add-button:hover {
+    background-color: var(--background);
+    border-color: var(--dark);
+}
+
+.task-input__input-field, 
+.task-input__add-button {
+    border: var(--dark) 2px solid;
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+.add-svg {
+    width: 25px;
+}
+
+.add-task--floating-button {
+    align-items: center;
+    background-color: var(--dark);
+    border-color: var(--dark);
+    border-radius: 100%;
+    bottom: 15px;
+    display: inline-flex;
+    height: 50px;
+    justify-content: center;
+    position: absolute;
+    right: 15px;
+    width: 50px;
+}
+
+@media only screen and (min-width:576px) {
+    .task-input__add-button {
+        margin-bottom: 4px;
+        margin-left: 8px;
+    }
+
+    .add-task--floating-button {
+        display: none;
+    }
+}
+
+/* To-do List Status */
+.to-do-list__status {
+    font-size: 1.5em;
+}
+
+/* Tasks */
+.tasks {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 350px;
+}
+
+.task__text {
+    font-size: 1.2em;
+}
+
+.tasks--all-complete,
+.tasks--all-active {
+    font-size: 0.7em;
+    list-style-type: none;
+    text-align: left;
+}
+
+.task--active,
+.task--complete {
+    margin-bottom: 8px;
+}
+
+.complete-svg,
+.delete-svg {
+    width: 12px;
+}
+
+.task--complete .task__text {
+    text-decoration: line-through;
+}
+
+.task--complete .task__delete-button {
+    margin-right: 0px;
+}
+
+.task__complete-button {
+    background-color: var(--light);
+}
+
+.task__delete-button {
+    background-color: transparent;
+}
+
+.task__delete-button,
+.task__complete-button {
+    align-items: center;
+    border: 1px solid var(--dark);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 150px;
+}
+
+.task__delete-button:hover,
+.task__complete-button:hover {
+    background-color: var(--light);
+}
+
+.button--text {
+    display: none;
+}
+    
+@media only screen and (min-width: 350px) {
+    .task--complete .task__delete-button {
+        margin-right: 10px;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    .tasks {
+        max-width: 100%;
+    }
+
+    .task--complete .task__delete-button {
+        margin-right: auto;
+    }
+
+    .task__complete-button {
+        order: -1;
+    }
+
+    .button--text {
+        display: inline-block;
+        margin-left: 8px;
+    }
+}

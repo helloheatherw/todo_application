@@ -8,5 +8,79 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+    <div class="container">
+        <header class="main-heading">To Do!</header>
+        <form class="form-inline row task-input">
+            <label class="sr-only" for="inlineFormInputName2">Task</label>
+            <input type="text" class="form-control task-input__input-field col-12 col-sm-8" id="inlineFormInputName2" placeholder="Something I need to do...">
+            <button type="submit" class="btn btn-primary task-input__add-button col-12 col-sm-3">Add</button>
+        </form>
+            
+        <p class="to-do-list__status">You have 3 tasks to do.</p>
+        
+        <div class="row tasks">
+            <ul class="tasks--all-active col-12">
+                <li class="task--active row">
+                    <span class="task__text col-12 col-sm-6">Paint and oil outdoor furniture</span>
+                    <button type="button" class="task__complete-button col-6 col-sm-3">
+                        <img src="confirm.svg" alt="" class="complete-svg">
+                        <span class="button--text" aria-hidden="false">Complete</span>
+                    </button>
+                    <button type="button" class="task__delete-button col-6 col-sm-3">
+                        <img src="close.svg" alt="" class="delete-svg">
+                        <span class="button--text" aria-hidden="false">Delete</span>
+                    </button>
+                </li>
+            
+                <li class="task--active row">
+                    <span class="task__text col-12 col-sm-6">Hang pictures in bedroom</span>
+                    <button type="button" class="task__complete-button col-6 col-sm-3">
+                        <img src="confirm.svg" alt="" class="complete-svg">
+                        <span class="button--text" aria-hidden="false">Complete</span>
+                    </button>
+                    <button type="button" class="task__delete-button col-6 col-sm-3">
+                        <img src="close.svg" alt="" class="delete-svg">
+                        <span class="button--text" aria-hidden="false">Delete</span>
+                    </button>
+                </li>
+            
+                <li class="task--active row">
+                    <span class="task__text col-12 col-sm-6">Order party decorations</span>
+                    <button type="button" class="task__complete-button col-6 col-sm-3">
+                        <img src="confirm.svg" alt="" class="complete-svg">
+                        <span class="button--text" aria-hidden="false">Complete</span>
+                    </button>
+                    <button type="button" class="task__delete-button col-6 col-sm-3">
+                        <img src="close.svg" alt="" class="delete-svg">
+                        <span class="button--text" aria-hidden="false">Delete</span>
+                    </button>
+                </li>
+            </ul>
+            <ul class="tasks--all-complete col-12">
+                <li class="task--complete row">
+                    <span class="col-6 col-sm-3"></span>
+                    <span class="task__text col-12 col-sm-6">Order replacement printer toner</span>
+                    <button type="button" class="task__delete-button col-6 col-sm-3">
+                        <img src="close.svg" alt="" class="delete-svg">
+                        <span class="button--text" aria-hidden="false">Delete</span>
+                    </button>
+                </li>
+            
+            
+                <li class="task--complete row">
+                    <span class="col-6 col-sm-3"></span>
+                    <span class="task__text col-12 col-sm-6">Organise Metrolink refund</span>
+                    <button type="button" class="task__delete-button col-6 col-sm-3">
+                        <img src="close.svg" alt="" class="delete-svg">
+                        <span class="button--text" aria-hidden="false">Delete</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+        <button aria-label="add task" class="add-task--floating-button">
+            <img src="plus.svg" class="add-svg" alt=""/>
+        </button>
+    </div>
 </body>
 </html>
