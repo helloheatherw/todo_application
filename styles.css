@@ -11,6 +11,17 @@ body {
     text-align: center;
 }
 
+.main-section {
+    margin: 0 20px;
+    max-width: 700px;
+}
+
+@media only screen and (min-width: 768px) {
+    .main-section {
+        margin: 0 auto;
+    }
+}
+
 /* Heading Section */
 .main-heading {
     font-size: 3em;
@@ -26,7 +37,8 @@ body {
 
 .task-input__input-field {
     margin-bottom: 4px;
-    min-width: 300px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .task-input__add-button {
@@ -65,6 +77,12 @@ body {
 }
 
 @media only screen and (min-width:576px) {
+    .task-input__input-field {
+        margin-left: 0;
+        margin-right: 0;
+        min-width: 300px;
+    }
+
     .task-input__add-button {
         margin-bottom: 4px;
         margin-left: 8px;
@@ -87,6 +105,20 @@ body {
     max-width: 350px;
 }
 
+.task {
+    display: flex;
+    justify-content: space-between;
+}
+
+.task__actions {
+    display: flex;
+    min-width: 65px;
+}
+
+.task--active .task__action-button:first-child {
+    margin-right: 16px;
+}
+
 .task__text {
     font-size: 1.2em;
 }
@@ -95,6 +127,7 @@ body {
 .tasks--all-active {
     font-size: 0.7em;
     list-style-type: none;
+    padding-inline-start: 0;
     text-align: left;
 }
 
@@ -112,8 +145,8 @@ body {
     text-decoration: line-through;
 }
 
-.task--complete .task__delete-button {
-    margin-right: 0px;
+.task__action-button {
+    height: 21px;
 }
 
 .task__complete-button {
@@ -122,6 +155,10 @@ body {
 
 .task__delete-button {
     background-color: transparent;
+}
+
+.task--complete .task__delete-button {
+    margin-right: 0;
 }
 
 .task__delete-button,
@@ -143,20 +180,14 @@ body {
 .button--text {
     display: none;
 }
-    
-@media only screen and (min-width: 350px) {
-    .task--complete .task__delete-button {
-        margin-right: 10px;
-    }
-}
 
 @media only screen and (min-width: 576px) {
     .tasks {
         max-width: 100%;
     }
 
-    .task--complete .task__delete-button {
-        margin-right: auto;
+    .task__actions {
+        width: auto;
     }
 
     .task__complete-button {
